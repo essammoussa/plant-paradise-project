@@ -14,6 +14,8 @@ import Landing from "./pages/Landing";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import { HashRouter } from "react-router-dom";
+
 // Create a QueryClient instance for React Query
 const queryClient = new QueryClient();
 const App = () => (
@@ -27,7 +29,7 @@ const App = () => (
         <Sonner />
         
         {/* Router setup */}
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             {/* Landing Page - Home route */}
             <Route path="/" element={<Landing />}/>
@@ -41,7 +43,7 @@ const App = () => (
             {/* 404 Page - Catch all unmatched routes */}
             <Route path="*" element={<NotFound />}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </CartProvider>
   </QueryClientProvider>);
