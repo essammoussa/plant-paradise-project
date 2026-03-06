@@ -300,7 +300,7 @@ Error generating stack: `+i.message+`
     }
     .pn-nav-link::after {
       content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 1px; background: var(--terracotta);
+      width: 0; height: 2px; background: var(--terracotta);
       transition: width .25s ease;
     }
     .pn-nav-link:hover::after, .pn-nav-link.shop::after { width: 100%; }
